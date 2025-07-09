@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block title %}About Me - Aryan Parte{% endblock %}
+{% block description %}Learn more about Aryan Parte's journey in Business Intelligence & Analytics, with hands-on experience in web scraping, automation, and data visualization.{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>About <span style="color: var(--accent-color);">Aryan Parte</span></h1>
+        <p class="subtitle">
+            I'm an MBA Tech student at NMIMS Mumbai, majoring in Business Intelligence & Analytics.
+            With a foundation in Computer Engineering and a passion for solving data problems, I combine my development skills with analytical thinking to create impactful dashboards, automate data workflows, and build web applications that scale.
+        </p>
+        <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+            <a href="#experience" class="btn">My Journey</a>
+            <a href="{{ url_for('contact') }}" class="btn" style="background: transparent; color: var(--text-color); border: 2px solid var(--text-color);">Work Together</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="hero-avatar">
+            <img src="{{ url_for('static', filename='images/aryan_parte_logo.jpg') }}" alt="Aryan Parte">
+        </div>
+        <div class="floating-elements">
+            <div class="floating-element"><i class="fas fa-graduation-cap"></i></div>
+            <div class="floating-element"><i class="fas fa-laptop-code"></i></div>
+            <div class="floating-element"><i class="fas fa-chart-pie"></i></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Sample Projects</h2>
+  <div class="cards-grid">
+
+    <div class="card" onclick="window.open('https://github.com/aryanparte03/Verify_Building_Details-RERA-', '_blank')" style="cursor: pointer;">
+      <div class="card-icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <h3>Building Details Auto Verifier</h3>
+      <p>An Excel file verifier to check mistaken inputs and errors built with Streamlit and Python.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="experience">
+    <h2 class="section-title">My Professional Experience</h2>
+    <div class="cards-grid">
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+            <h3>Current Internship – Envision Next</h3>
+            <p>Currently working on real-world analytics solutions including Excel-based automation, Power BI dashboarding, and data cleaning workflows tailored to streamline operations and reporting.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-code"></i></div>
+            <h3>Web Development Intern – Grauer & Weil</h3>
+            <p>Built three internal web apps using HTML, JS, PHP, Laravel, and MSSQL that simplified approval processes. Contributed to UI/UX, database design, and deployment on internal tools stack.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <h3>Dashboard Creation</h3>
+            <p>Designed and deployed dynamic dashboards in Power BI and Excel (with macros) for business reporting, tracking KPIs, and visualizing operational metrics in client environments.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-spider"></i></div>
+            <h3>Web Scraping & Automation</h3>
+            <p>Automated data collection and structuring with Python using BeautifulSoup, Selenium, and Pandas for structured and unstructured sources across web and internal platforms.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: var(--white); border-radius: var(--border-radius); padding: 4rem 2rem;">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-item">
+            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+            <h4>Analytics Tools</h4>
+            <p>Power BI • Tableau • Excel (Macros, Power Query) • SPSS</p>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-python"></i></div>
+            <h4>Programming</h4>
+            <p>Python (Pandas, Numpy, Matplotlib) • SQL • JavaScript</p>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <h4>Databases</h4>
+            <p>MySQL • MSSQL • PostgreSQL • SQLite</p>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+            <h4>Web Development</h4>
+            <p>Flask • Laravel • HTML/CSS • jQuery • Bootstrap</p>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-icon"><i class="fas fa-robot"></i></div>
+            <h4>Automation</h4>
+            <p>Selenium • Beautiful Soup • Web Scraping • APIs</p>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-icon"><i class="fas fa-tools"></i></div>
+            <h4>Tools</h4>
+            <p>VS Code • Git • Jupyter • XAMPP • SSMS</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">What Drives Me</h2>
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <div class="card" style="padding: 3rem;">
+            <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-color); margin-bottom: 2rem;">
+                "I see data not just as numbers but as narratives. My goal is to turn messy, disconnected data into
+                structured insights that power smart decisions — with clarity, speed, and design in mind."
+            </p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">20+</div>
+                    <div style="color: var(--text-light);">Projects Delivered</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--accent-secondary);">2</div>
+                    <div style="color: var(--text-light);">Internships</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--accent-tertiary);">100%</div>
+                    <div style="color: var(--text-light);">Commitment</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: var(--gradient); color: var(--white); border-radius: var(--border-radius);">
+    <div style="text-align: center; padding: 3rem 2rem;">
+        <h2 style="margin-bottom: 1rem; color: var(--white);">Let’s Collaborate</h2>
+        <p style="margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.9;">
+            Whether it's scraping data from 100+ pages or building an interactive dashboard for your next big idea,
+            I'm here to simplify and elevate your data journey.
+        </p>
+        <a href="{{ url_for('contact') }}" class="btn" style="background: var(--white); color: var(--text-color);">Get in Touch</a>
+    </div>
+</section>
+{% endblock %}

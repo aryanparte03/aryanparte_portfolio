@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}Say Hi - Aryan Parte{% endblock %}
+{% block description %}Connect with Aryan Parte - Let's start a conversation about Business Intelligence, Analytics, and exciting opportunities.{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hey there! 👋</h1>
+        <p class="subtitle">I'm always excited to connect with fellow data enthusiasts, potential collaborators, and curious minds. Whether you're interested in discussing the latest BI trends, exploring a project idea, or just want to chat about the fascinating world of data analytics, I'd love to hear from you!</p>
+        <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+            <a href="{{ url_for('contact') }}" class="btn">Let's Chat</a>
+            <a href="#quick-intro" class="btn" style="background: transparent; color: var(--text-color); border: 2px solid var(--text-color);">Learn More</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="hero-avatar" style="background: var(--gradient);">
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white;">
+                <i class="fas fa-comment-dots"></i>
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="floating-element">
+                <i class="fas fa-handshake"></i>
+            </div>
+            <div class="floating-element">
+                <i class="fas fa-coffee"></i>
+            </div>
+            <div class="floating-element">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="quick-intro">
+    <h2 class="section-title">What I'm All About</h2>
+    <div class="cards-grid">
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-brain"></i>
+            </div>
+            <h3>Analytical Mindset</h3>
+            <p>I love diving deep into data to uncover hidden patterns and insights. Every dataset tells a story, and I'm passionate about finding and sharing those narratives.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <h3>Collaborative Spirit</h3>
+            <p>Great projects happen when diverse minds come together. I thrive in collaborative environments and enjoy learning from others' perspectives.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Innovation Focus</h3>
+            <p>Technology evolves rapidly, and I stay curious about emerging trends in BI, analytics, and web development to deliver cutting-edge solutions.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h3>Passion-Driven</h3>
+            <p>What I do isn't just work—it's a passion. I genuinely enjoy turning complex problems into elegant, data-driven solutions.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: var(--white); border-radius: var(--border-radius);">
+    <div style="text-align: center; padding: 3rem 2rem;">
+        <h2 style="margin-bottom: 1rem;">Let's Connect!</h2>
+        <p style="color: var(--text-light); margin-bottom: 2rem; font-size: 1.1rem;">
+            I'm always open to interesting conversations. Whether you have a project in mind, want to discuss industry trends,
+            or just want to say hello, don't hesitate to reach out!
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="{{ url_for('contact') }}" class="btn">Send a Message</a>
+            <a href="{{ url_for('about') }}" class="btn" style="background: var(--accent-secondary); border: none;">More About Me</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Ways to Connect</h2>
+  <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+
+    <div class="card" title="partearyan713@gmail.com" onclick="window.open('mailto:partearyan713@gmail.com', '_blank')" style="cursor: pointer; text-align: center;">
+      <div class="card-icon" style="margin: 0 auto; width: 50px; height: 50px;">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <h3>Email</h3>
+      <p>For detailed discussions and formal inquiries</p>
+    </div>
+
+    <div class="card" title="linkedin.com/in/aryan-parte-7a3163251" onclick="window.open('https://www.linkedin.com/in/aryan-parte-7a3163251/', '_blank')" style="cursor: pointer; text-align: center;">
+      <div class="card-icon" style="margin: 0 auto; width: 50px; height: 50px;">
+        <i class="fab fa-linkedin"></i>
+      </div>
+      <h3>LinkedIn</h3>
+      <p>Professional networking and industry discussions</p>
+    </div>
+
+    <div class="card" title="github.com/aryanparte03" onclick="window.open('https://github.com/aryanparte03', '_blank')" style="cursor: pointer; text-align: center;">
+      <div class="card-icon" style="margin: 0 auto; width: 50px; height: 50px;">
+        <i class="fab fa-github"></i>
+      </div>
+      <h3>GitHub</h3>
+      <p>Check out my projects and code repositories</p>
+    </div>
+
+    <div class="card" title="+91 84336 42243" onclick="window.open('https://wa.me/918433642243', '_blank')" style="cursor: pointer; text-align: center;">
+      <div class="card-icon" style="margin: 0 auto; width: 50px; height: 50px;">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+      <h3>Coffee Chat</h3>
+      <p>Virtual or in-person casual conversations</p>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Aryan Parte - Business Intelligence & Analytics Specialist{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1 style="font-size: 5rem">analyst <span style="color: var(--accent-color);">&</span> developer</h1>
+        <p class="subtitle">Business Intelligence specialist with hands-on experience in dashboard creation, web development, and data analytics. I transform complex data into actionable insights.</p>
+        <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+            <a href="{{ url_for('about') }}" class="btn">Learn More</a>
+            <a href="{{ url_for('contact') }}" class="btn" style="background: transparent; color: var(--text-color); border: 2px solid var(--text-color);">Get In Touch</a>
+        </div>
+    </div>
+    
+    <div class="hero-image">
+        <div class="hero-avatar">
+            <!-- You can replace this with your actual photo -->
+            <div style="width: 100%; height: 100%; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white; font-weight: 700;">
+                <img src="{{ url_for('static', filename='images/aryan_parte_logo.jpg') }}" alt="Aryan Parte">
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="floating-element">
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <div class="floating-element">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="floating-element">
+                <i class="fas fa-database"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">My Expertise</h2>
+    <div class="cards-grid">
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Business Intelligence</h3>
+            <p>MBA major in Business Intelligence & Analytics with expertise in transforming raw data into strategic insights that drive business decisions.</p>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <h3>Dashboard Creation</h3>
+            <p>Creating interactive and visually appealing dashboards that provide real-time insights and enable data-driven decision making.</p>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-globe"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Full-stack web development with modern technologies, creating responsive and user-friendly applications.</p>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-spider"></i>
+            </div>
+            <h3>Web Scraping</h3>
+            <p>Automated data collection and extraction from various web sources to support analytics and research projects.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: var(--white); border-radius: var(--border-radius);">
+    <div style="text-align: center; padding: 3rem 2rem;">
+        <h2 style="margin-bottom: 1rem;">Ready to Work Together?</h2>
+        <p style="color: var(--text-light); margin-bottom: 2rem; font-size: 1.1rem;">Let's discuss how I can help transform your data into actionable insights.</p>
+        <a href="{{ url_for('contact') }}" class="btn">Start a Conversation</a>
+    </div>
+</section>
+{% endblock %}
