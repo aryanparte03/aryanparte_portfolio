@@ -109,6 +109,11 @@ body {
 .social-links {
     display: flex;
     gap: 1rem;
+    position: fixed;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
 }
 
 .social-link {
@@ -191,6 +196,11 @@ body {
 }
 
 .hero-avatar:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-hover);
+}
+
+.hero-avatar:hover:not(.no-hover) {
     transform: scale(1.05);
     box-shadow: var(--shadow-hover);
 }
