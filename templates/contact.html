@@ -6,14 +6,17 @@
 {% block content %}
 <section class="hero">
     <div class="hero-content">
-        <h1>Let's <span style="color: var(--accent-color);">Connect</span></h1>
-        <p class="subtitle">Ready to discuss your next Business Intelligence project, explore collaboration opportunities, or just have a chat about data analytics? I'd love to hear from you. Let's turn your data challenges into success stories.</p>
+        <h1 style="margin-left: 3rem">Let's <span style="color: var(--accent-color);">Connect</span></h1>
+        <p class="subtitle" style="margin-left: 3rem">Ready to discuss your next Business Intelligence project, explore collaboration opportunities, or just have a chat about data analytics? I'd love to hear from you. Let's turn your data challenges into success stories.</p>
     </div>
     
     <div class="hero-image">
         <div class="hero-avatar" style="background: var(--gradient);">
-            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white;">
-                <i class="fas fa-paper-plane"></i>
+            <div class="hero-avatar no-hover" style="width: 300px; height: 300px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: auto;">
+                <video autoplay muted playsinline tabindex="-1" style="max-width: 80%; height: auto; outline: none;">
+                    <source src="{{ url_for('static', filename='images/contact_me.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
         <div class="floating-elements">
@@ -35,8 +38,8 @@
         
         <!-- Contact Form -->
         <div>
-            <h2 style="margin-bottom: 2rem; font-size: 2rem;">Send a Message</h2>
-            <form class="contact-form" id="contact-form" style="padding: 2rem; margin: 0;">
+            <h2 style="margin-bottom: 3rem; margin-left: 3rem; font-size: 2rem;">Send a Message</h2>
+            <form class="contact-form" id="contact-form" method="POST" action="{{ url_for('contact') }}">
                 <div class="form-group">
                     <label for="name">Your Name *</label>
                     <input type="text" id="name" name="name" required>
@@ -124,20 +127,20 @@
                 </div>
             </div>
             
-            <div class="card" style="margin-top: 2rem; padding: 2rem; text-align: center;">
-                <h3 style="margin-bottom: 1rem;">Response Time</h3>
-                <p style="color: var(--text-light); margin-bottom: 1.5rem;">
-                    I typically respond to messages within 24 hours. For urgent inquiries, 
-                    please mention it in your subject line.
-                </p>
-                <div style="display: flex; justify-content: center; gap: 1rem;">
-                    <span style="padding: 0.5rem 1rem; background: var(--accent-color); color: white; border-radius: 20px; font-size: 0.9rem;">
-                        Quick Response
-                    </span>
-                    <span style="padding: 0.5rem 1rem; background: var(--accent-secondary); color: white; border-radius: 20px; font-size: 0.9rem;">
-                        Professional
-                    </span>
-                </div>
+<!--            <div class="card" style="margin-top: 2rem; padding: 2rem; text-align: center;">-->
+<!--                <h3 style="margin-bottom: 1rem;">Response Time</h3>-->
+<!--                <p style="color: var(&#45;&#45;text-light); margin-bottom: 1.5rem;">-->
+<!--                    I typically respond to messages within 24 hours. For urgent inquiries, -->
+<!--                    please mention it in your subject line.-->
+<!--                </p>-->
+<!--                <div style="display: flex; justify-content: center; gap: 1rem;">-->
+<!--                    <span style="padding: 0.5rem 1rem; background: var(&#45;&#45;accent-color); color: white; border-radius: 20px; font-size: 0.9rem;">-->
+<!--                        Quick Response-->
+<!--                    </span>-->
+<!--                    <span style="padding: 0.5rem 1rem; background: var(&#45;&#45;accent-secondary); color: white; border-radius: 20px; font-size: 0.9rem;">-->
+<!--                        Professional-->
+<!--                    </span>-->
+<!--                </div>-->
             </div>
         </div>
     </div>
