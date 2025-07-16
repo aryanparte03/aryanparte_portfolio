@@ -4,7 +4,7 @@
 {% block description %}Learn more about Aryan Parte's journey in Business Intelligence & Analytics, with hands-on experience in web scraping, automation, and data visualization.{% endblock %}
 
 {% block content %}
-<section class="hero">
+<section class="hero" style="margin-left: 3rem">
     <div class="hero-content">
         <h1>About <span style="color: var(--accent-color);">Aryan Parte</span></h1>
         <p class="subtitle">
@@ -30,19 +30,53 @@
 </section>
 
 <section class="section">
-  <h2 class="section-title">Sample Projects</h2>
-  <div class="cards-grid">
+  <h2 class="section-title">My Projects</h2>
 
-    <div class="card" onclick="window.open('https://github.com/aryanparte03/Verify_Building_Details-RERA-', '_blank')" style="cursor: pointer;">
-      <div class="card-icon">
-        <i class="fas fa-code"></i>
+  <div style="display: flex; flex-wrap: wrap; gap: 3%; justify-content: space-between;">
+
+    <!-- Project 1 -->
+    <div class="card" style="width: 48%; margin-bottom: 20px; display: flex; flex-direction: column; justify-content: space-between; min-height: 460px;">
+      <div>
+        <h3>
+          <a href="https://github.com/aryanparte03/Verify_Building_Details-RERA" target="_blank" style="color: #3b82f6; text-decoration: underline;">
+            Building Details Auto Verifier (RERA)
+          </a>
+        </h3>
+        <p>An Excel file verifier app to check mistaken inputs and errors built with Streamlit and Python.</p>
       </div>
-      <h3>Building Details Auto Verifier</h3>
-      <p>An Excel file verifier to check mistaken inputs and errors built with Streamlit and Python.</p>
+      <img src="{{ url_for('static', filename='images/verify_bldg_dets.png') }}" alt="Excel Verifier Preview" style="width: 100%; border-radius: 8px;">
+    </div>
+
+    <!-- Project 2 -->
+    <div class="card" style="width: 48%; margin-bottom: 20px; display: flex; flex-direction: column; justify-content: space-between; min-height: 460px;">
+      <div>
+        <h3>
+          <a href="https://github.com/aryanparte03/AutoGenerate-Circular29-From-Form3-RERA" target="_blank" style="color: #3b82f6; text-decoration: underline;">
+            Circular29 Generator from Form 3 (RERA)
+          </a>
+        </h3>
+        <p>A Circular29 generator app just a click from uploading Form 3 built with Streamlit and Python.</p>
+      </div>
+      <img src="{{ url_for('static', filename='images/circular29_converter.png') }}" alt="Circular29 Generator Preview" style="width: 100%; border-radius: 8px;">
+    </div>
+
+    <!-- Project 3 -->
+    <div class="card" style="width: 48%; margin-bottom: 20px; display: flex; flex-direction: column; justify-content: space-between; min-height: 460px;">
+      <div>
+        <h3>
+          <a href="https://github.com/aryanparte03/Dashboard-Departmental" target="_blank" style="color: #3b82f6; text-decoration: underline;">
+            Insightful Departmental Dashboards
+          </a>
+        </h3>
+        <p>Dashboard for 3 departments built with Power BI & DAX.</p>
+      </div>
+      <img src="{{ url_for('static', filename='images/collage_dash1.jpg') }}" alt="Dashboard Preview" style="width: 100%; border-radius: 8px;">
     </div>
 
   </div>
 </section>
+
+
 
 
 <section class="section" id="experience">
@@ -125,8 +159,8 @@
             </p>
             <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
                 <div style="text-align: center;">
-                    <div style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">20+</div>
-                    <div style="color: var(--text-light);">Projects Delivered</div>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">30+</div>
+                    <div style="color: var(--text-light);">Projects Undertaken</div>
                 </div>
                 <div style="text-align: center;">
                     <div style="font-size: 2rem; font-weight: 700; color: var(--accent-secondary);">2</div>
