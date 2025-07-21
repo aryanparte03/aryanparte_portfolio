@@ -13,27 +13,28 @@
 <body>
     <header class="header">
         <nav class="nav">
-<!--            <div class="logo">-->
-<!--&lt;!&ndash;                <a href="{{ url_for('index') }}">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="logo-icon">AP</div>&ndash;&gt;-->
-<!--&lt;!&ndash;                </a>&ndash;&gt;-->
-<!--            </div>-->
-                <ul class="nav-menu">
-                    <li><a href="{{ url_for('index') }}" class="nav-link {% if request.endpoint == 'index' %}active{% endif %}">home</a></li>
-                    <li><a href="{{ url_for('say_hi') }}" class="nav-link {% if request.endpoint == 'say_hi' %}active{% endif %}">say hi</a></li>
-                    <li><a href="{{ url_for('about') }}" class="nav-link {% if request.endpoint == 'about' %}active{% endif %}">about me</a></li>
-                    <li><a href="{{ url_for('contact') }}" class="nav-link {% if request.endpoint == 'contact' %}active{% endif %}">contact</a></li>
-                </ul>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/aryan-parte-7a3163251/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/aryanparte03" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-            </div>
+            <!-- Hamburger FIRST -->
             <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}" class="nav-link {% if request.endpoint == 'index' %}active{% endif %}">home</a></li>
+                <li><a href="{{ url_for('say_hi') }}" class="nav-link {% if request.endpoint == 'say_hi' %}active{% endif %}">say hi</a></li>
+                <li><a href="{{ url_for('about') }}" class="nav-link {% if request.endpoint == 'about' %}active{% endif %}">about me</a></li>
+                <li><a href="{{ url_for('contact') }}" class="nav-link {% if request.endpoint == 'contact' %}active{% endif %}">contact</a></li>
+            </ul>
+
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/aryan-parte-7a3163251/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/aryanparte03" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            </div>
         </nav>
+
     </header>
     <main class="main-content">
         {% block content %}{% endblock %}
