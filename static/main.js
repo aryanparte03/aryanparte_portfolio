@@ -38,7 +38,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        //e.preventDefault();
+        e.preventDefault();
 
         // Get form data
         const formData = new FormData(contactForm);
@@ -59,7 +59,7 @@ if (contactForm) {
 
         // Simulate form submission
         showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
-        contactForm.reset();
+        //contactForm.reset();
     });
 }
 
