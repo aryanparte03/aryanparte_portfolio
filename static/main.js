@@ -38,7 +38,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+        //e.preventDefault();
 
         // Get form data
         const formData = new FormData(contactForm);
