@@ -532,6 +532,30 @@ body {
   transform: translateY(0);
 }
 
+.btn {
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  min-width: 140px; /* optional for consistency */
+}
+
+.btn-solid {
+  background: var(--gradient);
+  color: var(--white);
+  border: none;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    padding: 1rem 2rem; /* Ensure same padding as .btn */
+    box-sizing: border-box;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -757,5 +781,14 @@ body {
     background: rgba(255, 255, 255, 0.8);
     padding: 0.5rem 0.75rem;
     border-radius: 20px 0 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px; /* or match padding exactly across buttons */
   }
 }
