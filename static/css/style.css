@@ -75,6 +75,9 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .nav-link {
@@ -380,6 +383,9 @@ body {
     transition: var(--transition);
     display: inline-block;
     text-decoration: none;
+    width: fit-content;
+    max-width: 100%;
+    white-space: nowrap;
 }
 
 .btn:hover {
@@ -456,6 +462,41 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero,
+  .hero-content h1,
+  .hero-content p {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .btn + .btn {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-avatar.no-hover {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .hero-content .subtitle {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
     .nav-menu,
     .social-links {
         display: none;
@@ -497,6 +538,40 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    z-index: 999;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-menu.active {
+    display: flex !important;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
 @media (max-width: 480px) {
     .nav {
         padding: 0 1rem;
@@ -514,4 +589,37 @@ body {
         padding: 2rem 1.5rem;
         margin: 0 1rem;
     }
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .card {
+    min-height: auto !important;
+  }
+
+  .card img {
+    max-height: 180px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
 }
