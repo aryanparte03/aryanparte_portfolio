@@ -11,6 +11,12 @@
 </head>
 
 <body>
+    <div id="loader-overlay">
+      <div class="loader-ball ball-one"></div>
+      <div class="loader-ball ball-two"></div>
+      <div class="loader-ball ball-three"></div>
+      <p class="loader-tip">Welcome! Loading your experience...</p>
+    </div>
     <header class="header">
         <nav class="nav">
             <!-- Hamburger FIRST -->
@@ -46,6 +52,6 @@
         </div>
     </footer>
 
-    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
