@@ -4,201 +4,201 @@
 {% block description %}Get in touch with Aryan Parte for Business Intelligence & Analytics projects, collaborations, and professional inquiries.{% endblock %}
 
 {% block content %}
-<section class="hero">
-    <div class="hero-content">
-        <h1 style="margin-left: 3rem">Let's <span style="color: var(--accent-color);">Connect</span></h1>
-        <p class="subtitle" style="margin-left: 3rem">Ready to discuss your next Business Intelligence project, explore collaboration opportunities, or just have a chat about data analytics? I'd love to hear from you. Let's turn your data challenges into success stories.</p>
-    </div>
-    
-    <div class="hero-image">
-        <div>
-            <div class="hero-avatar no-hover" style="width: 400px; height: 400px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: auto;">
-                <video autoplay muted playsinline tabindex="-1"
-                       style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; outline: none;">
-                    <source src="{{ url_for('static', filename='images/contact_me.mp4') }}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+<body class="contact-page">
+    <section style="margin-left: 3rem" class="hero">
+        <div class="hero-content">
+            <h1>Let's <span style="color: var(--accent-color);">Connect</span></h1>
+            <p class="subtitle">Ready to discuss your next Business Intelligence project, explore collaboration opportunities, or just have a chat about data analytics? I'd love to hear from you. Let's turn your data challenges into success stories.</p>
         </div>
-        <div class="floating-elements">
-            <div class="floating-element">
-                <i class="fas fa-envelope"></i>
-            </div>
-            <div class="floating-element">
-                <i class="fas fa-phone"></i>
-            </div>
-            <div class="floating-element">
-                <i class="fas fa-map-marker-alt"></i>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section class="section">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
-        
-        <!-- Contact Form -->
-        <div>
-            <h2 style="margin-bottom: 3rem; margin-left: 3rem; font-size: 2rem;">Send a Message</h2>
-            <form class="contact-form" id="contact-form" method="POST" action="{{ url_for('contact') }}">
-                <div class="form-group">
-                    <label for="name">Your Name *</label>
-                    <input type="text" id="name" name="name" required>
+        <div class="hero-image">
+            <div>
+                <div class="hero-avatar no-hover" style="width: 400px; height: 400px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: auto;">
+                    <video autoplay muted playsinline tabindex="-1" style="max-width: 80%; height: auto; outline: none; display: block; margin: auto;">
+                        <source src="{{ url_for('static', filename='images/contact_me.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
+            </div>
+            <div class="floating-elements">
+                <div class="floating-element">
+                    <i class="fas fa-envelope"></i>
                 </div>
-                
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                <div class="floating-element">
+                    <i class="fas fa-phone"></i>
                 </div>
-                
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" placeholder="Tell me about your project, ideas, or just say hello!" required></textarea>
+                <div class="floating-element">
+                    <i class="fas fa-map-marker-alt"></i>
                 </div>
-                
-                <button type="submit" class="btn" style="width: 100%;">
-                    <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
-                    Send Message
-                </button>
-            </form>
+            </div>
         </div>
-        
-        <!-- Contact Information -->
-        <div>
-            <h2 style="margin-bottom: 2rem; font-size: 2rem;">Get In Touch</h2>
-            
+    </section>
+
+    <section class="section">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+
+            <!-- Contact Form -->
+            <div>
+                <h2 style="margin-bottom: 3rem; margin-left: 3rem; font-size: 2rem;">Send a Message</h2>
+                <form class="contact-form" id="contact-form" method="POST" action="{{ url_for('contact') }}">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project, ideas, or just say hello!" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%;">
+                        <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+                <h2 style="margin-bottom: 2rem; font-size: 2rem;">Get In Touch</h2>
+
+                <div class="cards-grid" style="grid-template-columns: 1fr; gap: 1.5rem;">
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="card-icon" style="margin: 0; width: 50px; height: 50px;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 style="margin: 0;">Email</h3>
+                                <p style="margin: 0; color: var(--text-light);">
+                                    <a href="mailto:partearyan713@gmail.com" style="color: #1e90ff; text-decoration: none;">partearyan713@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="card-icon" style="margin: 0; width: 50px; height: 50px;">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div>
+                                <h3 style="margin: 0;">LinkedIn</h3>
+                                <p style="margin: 0; color: var(--text-light);">
+                                  <a href="https://www.linkedin.com/in/aryan-parte-7a3163251/" target="_blank" style="color: #1e90ff; text-decoration: none;">linkedin.com/in/aryan-parte-7a3163251</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="card-icon" style="margin: 0; width: 50px; height: 50px;">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div>
+                                <h3 style="margin: 0;">GitHub</h3>
+                                  <a href="https://github.com/aryanparte03" target="_blank" style="color: #1e90ff; text-decoration: none;">github.com/aryanparte03</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="card-icon" style="margin: 0; width: 50px; height: 50px;">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h3 style="margin: 0;">WhatsApp</h3>
+                                <a href="https://wa.me/918433642243" target="_blank" style="color: #1e90ff; text-decoration: none;">
+                                    Message me directly
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    <!--            <div class="card" style="margin-top: 2rem; padding: 2rem; text-align: center;">-->
+    <!--                <h3 style="margin-bottom: 1rem;">Response Time</h3>-->
+    <!--                <p style="color: var(&#45;&#45;text-light); margin-bottom: 1.5rem;">-->
+    <!--                    I typically respond to messages within 24 hours. For urgent inquiries, -->
+    <!--                    please mention it in your subject line.-->
+    <!--                </p>-->
+    <!--                <div style="display: flex; justify-content: center; gap: 1rem;">-->
+    <!--                    <span style="padding: 0.5rem 1rem; background: var(&#45;&#45;accent-color); color: white; border-radius: 20px; font-size: 0.9rem;">-->
+    <!--                        Quick Response-->
+    <!--                    </span>-->
+    <!--                    <span style="padding: 0.5rem 1rem; background: var(&#45;&#45;accent-secondary); color: white; border-radius: 20px; font-size: 0.9rem;">-->
+    <!--                        Professional-->
+    <!--                    </span>-->
+    <!--                </div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--white); border-radius: var(--border-radius);">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
             <div class="cards-grid" style="grid-template-columns: 1fr; gap: 1.5rem;">
                 <div class="card">
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div class="card-icon" style="margin: 0; width: 50px; height: 50px;">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h3 style="margin: 0;">Email</h3>
-                            <p style="margin: 0; color: var(--text-light);">
-                                <a href="mailto:partearyan713@gmail.com" style="color: #1e90ff; text-decoration: none;">partearyan713@gmail.com</a>
-                            </p>
-                        </div>
-                    </div>
+                    <h3 style="color: var(--accent-color);">What type of projects do you work on?</h3>
+                    <p>I specialize in Business Intelligence and Analytics projects including dashboard creation, data visualization,
+                    web scraping, and web development. I work with businesses of all sizes to transform their data into actionable insights.</p>
                 </div>
-                
+
                 <div class="card">
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div class="card-icon" style="margin: 0; width: 50px; height: 50px;">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div>
-                            <h3 style="margin: 0;">LinkedIn</h3>
-                            <p style="margin: 0; color: var(--text-light);">
-                              <a href="https://www.linkedin.com/in/aryan-parte-7a3163251/" target="_blank" style="color: #1e90ff; text-decoration: none;">linkedin.com/in/aryan-parte-7a3163251</a>
-                            </p>
-                        </div>
-                    </div>
+                    <h3 style="color: var(--accent-color);">Do you work with remote clients?</h3>
+                    <p>Absolutely! I work with clients globally and am experienced in remote collaboration. I use modern tools
+                    and communication platforms to ensure seamless project delivery regardless of location.</p>
                 </div>
-                
+
                 <div class="card">
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div class="card-icon" style="margin: 0; width: 50px; height: 50px;">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div>
-                            <h3 style="margin: 0;">GitHub</h3>
-                              <a href="https://github.com/aryanparte03" target="_blank" style="color: #1e90ff; text-decoration: none;">github.com/aryanparte03</a>
-                        </div>
-                    </div>
+                    <h3 style="color: var(--accent-color);">What's your typical project timeline?</h3>
+                    <p>Project timelines vary depending on complexity and scope. Simple dashboards might take 1-2 weeks,
+                    while comprehensive BI solutions could take 1-3 months. I always provide realistic timelines during our initial discussion.</p>
                 </div>
-                
+
                 <div class="card">
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div class="card-icon" style="margin: 0; width: 50px; height: 50px;">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div>
-                            <h3 style="margin: 0;">WhatsApp</h3>
-                            <a href="https://wa.me/918433642243" target="_blank" style="color: #1e90ff; text-decoration: none;">
-                                Message me directly
-                            </a>
-                        </div>
-                    </div>
+                    <h3 style="color: var(--accent-color);">Do you provide ongoing support?</h3>
+                    <p>Yes! I offer maintenance and support packages for ongoing projects. This includes updates, troubleshooting,
+                    and enhancements to ensure your solutions continue to meet your evolving business needs.</p>
                 </div>
-            </div>
-            
-<!--            <div class="card" style="margin-top: 2rem; padding: 2rem; text-align: center;">-->
-<!--                <h3 style="margin-bottom: 1rem;">Response Time</h3>-->
-<!--                <p style="color: var(&#45;&#45;text-light); margin-bottom: 1.5rem;">-->
-<!--                    I typically respond to messages within 24 hours. For urgent inquiries, -->
-<!--                    please mention it in your subject line.-->
-<!--                </p>-->
-<!--                <div style="display: flex; justify-content: center; gap: 1rem;">-->
-<!--                    <span style="padding: 0.5rem 1rem; background: var(&#45;&#45;accent-color); color: white; border-radius: 20px; font-size: 0.9rem;">-->
-<!--                        Quick Response-->
-<!--                    </span>-->
-<!--                    <span style="padding: 0.5rem 1rem; background: var(&#45;&#45;accent-secondary); color: white; border-radius: 20px; font-size: 0.9rem;">-->
-<!--                        Professional-->
-<!--                    </span>-->
-<!--                </div>-->
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section" style="background: var(--white); border-radius: var(--border-radius);">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <div style="max-width: 800px; margin: 0 auto;">
-        <div class="cards-grid" style="grid-template-columns: 1fr; gap: 1.5rem;">
-            <div class="card">
-                <h3 style="color: var(--accent-color);">What type of projects do you work on?</h3>
-                <p>I specialize in Business Intelligence and Analytics projects including dashboard creation, data visualization, 
-                web scraping, and web development. I work with businesses of all sizes to transform their data into actionable insights.</p>
-            </div>
-            
-            <div class="card">
-                <h3 style="color: var(--accent-color);">Do you work with remote clients?</h3>
-                <p>Absolutely! I work with clients globally and am experienced in remote collaboration. I use modern tools 
-                and communication platforms to ensure seamless project delivery regardless of location.</p>
-            </div>
-            
-            <div class="card">
-                <h3 style="color: var(--accent-color);">What's your typical project timeline?</h3>
-                <p>Project timelines vary depending on complexity and scope. Simple dashboards might take 1-2 weeks, 
-                while comprehensive BI solutions could take 1-3 months. I always provide realistic timelines during our initial discussion.</p>
-            </div>
-            
-            <div class="card">
-                <h3 style="color: var(--accent-color);">Do you provide ongoing support?</h3>
-                <p>Yes! I offer maintenance and support packages for ongoing projects. This includes updates, troubleshooting, 
-                and enhancements to ensure your solutions continue to meet your evolving business needs.</p>
+    <section class="section" style="background: var(--gradient); color: var(--white); border-radius: var(--border-radius);">
+        <div style="text-align: center; padding: 3rem 2rem;">
+            <h2 style="margin-bottom: 1rem; color: var(--white);">Ready to Get Started?</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.9;">
+                Whether you have a specific project in mind or just want to explore possibilities,
+                I'm here to help. Let's schedule a conversation to discuss your goals and how I can contribute to your success.
+            </p>
+            <div class="contact-btn-group fade-pop">
+              <a href="{{ url_for('say_hi') }}" class="btn btn-solid btn-fadein say-hi-btn">Say Hello First</a>
+              <a href="{{ url_for('about') }}" class="btn btn-outline btn-dashlift lets-chat-btn">Learn About Me</a>
             </div>
         </div>
-    </div>
-</section>
-
-<section class="section" style="background: var(--gradient); color: var(--white); border-radius: var(--border-radius);">
-    <div style="text-align: center; padding: 3rem 2rem;">
-        <h2 style="margin-bottom: 1rem; color: var(--white);">Ready to Get Started?</h2>
-        <p style="margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.9;">
-            Whether you have a specific project in mind or just want to explore possibilities, 
-            I'm here to help. Let's schedule a conversation to discuss your goals and how I can contribute to your success.
-        </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="{{ url_for('say_hi') }}" class="btn" style="background: var(--white); color: var(--text-color);">Say Hello First</a>
-            <a href="{{ url_for('about') }}" class="btn" style="background: transparent; border: 2px solid var(--white); color: var(--white);">Learn More About Me</a>
-        </div>
-    </div>
-</section>
-
+    </section>
+</body>
 <style>
 @media (max-width: 768px) {
     .section > div:first-child {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
     }
-    
+
     .contact-form {
         margin: 0 !important;
     }
