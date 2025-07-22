@@ -883,22 +883,49 @@ body {
   text-align: center;
 }
 
+/* Desktop and tablet: side-by-side, centered */
+.hi-btn-group1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;  /* ensures wrapping if needed on small screens */
+}
+
+.hi-btn-group1 .btn {
+  max-width: 250px;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+
 
 @media (max-width:600px) {
-  .hi-btn-group, .about-btn-group, .contact-btn-group {
+  .hi-btn-group, .hi-btn-group1, .about-btn-group, .contact-btn-group {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
     margin: 1.4rem 0;
   }
-  .about-btn-single, .index-btn-main { display: flex; justify-content: center; margin: 2rem 0; }
-  .hi-btn-group .btn, .about-btn-group .btn, .contact-btn-group .btn, .about-btn-single .btn, .index-btn-main .btn {
+  .about-btn-single, .index-btn-main {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  .hi-btn-group .btn,
+  .hi-btn-group1 .btn,
+  .about-btn-group .btn,
+  .contact-btn-group .btn,
+  .about-btn-single .btn,
+  .index-btn-main .btn {
     width: 93vw;
     max-width: 320px;
     justify-content: center;
   }
 }
+
 
 /*-------------------- Unique Button Animations/Styles for Each Page --------------------*/
 
