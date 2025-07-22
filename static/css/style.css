@@ -863,6 +863,21 @@ body {
 .btn-outline { background: none; color: var(--accent-color); border: 2px solid var(--accent-color); }
 .btn-outline:hover { background: var(--accent-color); color: var(--white); }
 
+.hi-btn-group {
+  display: flex;
+  justify-content: center; /* centers buttons horizontally */
+  gap: 2rem;               /* space between buttons */
+  margin: 2rem 0;
+  flex-wrap: wrap;         /* allows wrapping on smaller screens */
+}
+
+.hi-btn-group .btn {
+  max-width: 250px;        /* keeps button widths consistent */
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+
 @media (max-width:600px) {
   .hi-btn-group, .about-btn-group, .contact-btn-group {
     display: flex;
