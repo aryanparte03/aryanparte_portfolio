@@ -237,12 +237,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // 📱 Mobile: tap pop effect
     if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
       floatIcons.forEach(icon => {
-        icon.addEventListener('touchstart', function() {
-          icon.classList.add('active');  // shine effect only
-
+        icon.addEventListener('pointerdown', () => {
+          icon.classList.add('active');
           setTimeout(() => {
             icon.classList.remove('active');
-          }, 350); // duration matches your shine animation
+          }, 350);
         });
       });
     }
