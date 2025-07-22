@@ -820,9 +820,12 @@ body {
 /* CTA Button Layout */
 .cta-buttons {
   display: flex;
-  gap: 2rem;
   justify-content: center;
-  margin-top: 2rem;
+  align-content: center;
+  gap: 1rem;
+  align-items: center;
+  margin: 1.4rem 0;
+  max-width: 420px;
 }
 
 /* Responsive stacking for mobile */
@@ -865,9 +868,12 @@ body {
 
 .hi-btn-group {
   display: flex;
-  justify-content: center; /* centers buttons horizontally */
-  gap: 2rem;               /* space between buttons */
-  margin: 2rem 0;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+  align-items: center;
+  margin: 1.4rem 0;
+  max-width: 420px;
   flex-wrap: wrap;         /* allows wrapping on smaller screens */
 }
 
