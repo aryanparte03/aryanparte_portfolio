@@ -1118,3 +1118,96 @@ body.page-fading {
     margin-top: 0 !important;
   }
 }
+
+@media (max-width: 600px) {
+  /* Replace .projects-container below with your actual projects wrapper class */
+  .projects-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;  /* Adjust space between cards as desired */
+  }
+
+  .projects-container > * {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+.float-icon {
+  transition:
+    transform 0.35s cubic-bezier(.6,-0.28,.74,.05),
+    box-shadow 0.2s,
+    filter 0.2s;
+  cursor: pointer;
+  will-change: transform;
+}
+/* Optional: glow effect for tap/click */
+.float-icon.active {
+  filter: brightness(1.2) drop-shadow(0 2px 16px var(--accent-secondary, #4ecdc4));
+  box-shadow: 0 0 18px 4px var(--accent-secondary, #4ecdc4, 0.16);
+  z-index: 10;
+}
+
+.float-icon-1:hover {
+  animation: swirl 0.6s ease-in-out;
+}
+.float-icon-2:hover {
+  animation: wiggle 0.4s ease-in-out;
+}
+.float-icon-3:hover {
+  animation: pulse 0.8s ease-in-out;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(3deg); }
+  100% { transform: rotate(0); }
+}
+
+@keyframes swirl {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1.2); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+/*@keyframes bounce {*/
+/*  0%, 100% { transform: scale(1) rotate(-8deg) translateY(0); }*/
+/*  30%     { transform: scale(1.18) rotate(-8deg) translateY(-10px); }*/
+/*  50%     { transform: scale(1.10) rotate(-8deg) translateY(-5px); }*/
+/*  70%     { transform: scale(1.15) rotate(-8deg) translateY(-8px); }*/
+/*}*/
+
+/*.float-icon.bounce {*/
+/*  animation: bounce 0.5s cubic-bezier(0.28, 0.84, 0.42, 1);*/
+/*}*/
+
+/* Prevent outlines/borders/glitches on video hover and focus */
+.hero-avatar video,
+.hero-avatar.no-hover video {
+  object-fit: contain !important;    /* Ensures entire video is visible */
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  display: block;
+}
+
+.hero-avatar, .hero-avatar.no-hover {
+  width: 400px; /* or your desired size */
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white; /* or desired BG */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
