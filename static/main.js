@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
+
       const formData = new FormData(contactForm);
       const name = formData.get('name');
       const email = formData.get('email');
@@ -77,12 +78,24 @@ document.addEventListener('DOMContentLoaded', function () {
         showNotification('Please fill in all fields', 'error');
         return;
       }
+
       if (!isValidEmail(email)) {
         showNotification('Please enter a valid email address', 'error');
         return;
       }
 
-      showNotification("Thank you for your message! I'll get back to you soon.", 'success');
+      // send it using fetch() to an API endpoint
+      fetch('/contact', {
+        method: 'POST',
+        body: formData
+      }).then(res => {
+        if (res.ok) {
+          showNotification("Thank you for your message!", 'success');
+          contactForm.reset(); // ✅ reset only *after* message is submitted
+        } else {
+          showNotification("Something went wrong.", 'error');
+        }
+      });
     });
   }
 
