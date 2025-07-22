@@ -18,13 +18,13 @@
     </div>
 
     <div class="hero-image">
-        <div class="hero-avatar">
+        <div class="hero-avatar no-hover" style="width: 400px; height: 400px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: auto;">
             <img src="{{ url_for('static', filename='images/aryan_parte_logo.jpg') }}" alt="Aryan Parte">
         </div>
         <div class="floating-elements">
-            <div class="floating-element"><i class="fas fa-graduation-cap"></i></div>
-            <div class="floating-element"><i class="fas fa-laptop-code"></i></div>
-            <div class="floating-element"><i class="fas fa-chart-pie"></i></div>
+            <div class="floating-element float-icon float-icon-1"><i class="fas fa-graduation-cap"></i></div>
+            <div class="floating-element float-icon float-icon-2"><i class="fas fa-laptop-code"></i></div>
+            <div class="floating-element float-icon float-icon-3"><i class="fas fa-chart-pie"></i></div>
         </div>
     </div>
 </section>
@@ -32,7 +32,7 @@
 <section class="section">
   <h2 class="section-title">My Projects</h2>
 
-  <div style="display: flex; flex-wrap: wrap; gap: 3%; justify-content: space-between;">
+  <div class="projects-container" style="display: flex; flex-wrap: wrap; gap: 3%; justify-content: space-between;">
 
     <!-- Project 1 -->
     <div class="card" style="width: 48%; margin-bottom: 20px; display: flex; flex-direction: column; justify-content: space-between; min-height: 460px;">
