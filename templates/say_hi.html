@@ -8,9 +8,9 @@
     <div class="hero-content">
         <h1>Hey there! 👋</h1>
         <p class="subtitle">I'm always excited to connect with fellow data enthusiasts, potential collaborators, and curious minds. Whether you're interested in discussing the latest BI trends, exploring a project idea, or just want to chat about the fascinating world of data analytics, I'd love to hear from you!</p>
-        <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-            <a href="{{ url_for('contact') }}" class="btn">Let's Chat</a>
-            <a href="#quick-intro" class="btn" style="background: transparent; color: var(--text-color); border: 2px solid var(--text-color);">Learn More</a>
+        <div class="hi-btn-group round-float">
+          <a href="{{ url_for('contact') }}" class="btn btn-solid btn-round shadow-pulse lets-chat-btn">Let's Chat</a>
+          <a href="{{ url_for('about') }}" class="btn btn-outline btn-fade learn-more-btn">Learn More</a>
         </div>
     </div>
 
@@ -82,9 +82,9 @@
             I'm always open to interesting conversations. Whether you have a project in mind, want to discuss industry trends,
             or just want to say hello, don't hesitate to reach out!
         </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="{{ url_for('contact') }}" class="btn">Send a Message</a>
-            <a href="{{ url_for('about') }}" class="btn" style="background: var(--accent-secondary); border: none;">More About Me</a>
+        <div class="hi-btn-group hi-btn-outline">
+          <a href="{{ url_for('contact') }}" class="btn btn-outline btn-border-anim lets-chat-btn">Send a Message</a>
+          <a href="{{ url_for('about') }}" class="btn btn-solid btn-pop learn-more-btn">More About Me</a>
         </div>
     </div>
 </section>
