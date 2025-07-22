@@ -11,9 +11,9 @@
             I'm an MBA Tech student at NMIMS Mumbai, majoring in Business Intelligence & Analytics.
             With a foundation in Computer Engineering and a passion for solving data problems, I combine my development skills with analytical thinking to create impactful dashboards, automate data workflows, and build web applications that scale.
         </p>
-        <div style="display: flex; gap: 1rem; margin-top: 2rem;">
-            <a href="#experience" class="btn">My Journey</a>
-            <a href="{{ url_for('contact') }}" class="btn" style="background: transparent; color: var(--text-color); border: 2px solid var(--text-color);">Work Together</a>
+        <div class="about-btn-group">
+          <a href="#experience" class="btn btn-solid">My Journey</a>
+          <a href="{{ url_for('contact') }}" class="btn btn-outline lets-chat-btn">Work Together</a>
         </div>
     </div>
 
@@ -182,7 +182,9 @@
             Whether it's scraping data from 100+ pages or building an interactive dashboard for your next big idea,
             I'm here to simplify and elevate your data journey.
         </p>
-        <a href="{{ url_for('contact') }}" class="btn" style="background: var(--white); color: var(--text-color);">Get in Touch</a>
+        <div class="about-btn-single">
+          <a href="{{ url_for('contact') }}" class="btn btn-solid btn-bounce lets-chat-btn">Get in Touch</a>
+        </div>
     </div>
 </section>
 {% endblock %}
