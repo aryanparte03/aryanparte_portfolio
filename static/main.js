@@ -22,23 +22,65 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
+  anchor.addEventListener('click', function (e) {
+    // Only intercept smooth scroll for anchors on same page (not hashless or #
+    // and not with data-no-scroll attr)
+    const hrefTarget = this.getAttribute('href');
+    if (hrefTarget.length > 1 && !this.hasAttribute('data-no-scroll')) {
+      e.preventDefault();
+      const target = document.querySelector(hrefTarget);
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+  });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.ripple-btn').forEach(function (rippleBtn) {
+    rippleBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // Remove any existing ripple
+      const oldRipple = rippleBtn.querySelector('.ripple-effect');
+      if (oldRipple) oldRipple.remove();
+
+      // Create ripple
+      const rect = rippleBtn.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height) * 2;
+      const ripple = document.createElement('span');
+      ripple.classList.add('ripple-effect');
+      ripple.style.width = ripple.style.height = size + 'px';
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
+
+      rippleBtn.appendChild(ripple);
+
+      requestAnimationFrame(() => {
+        ripple.classList.add('active');
+      });
+
+      ripple.addEventListener('transitionend', () => ripple.remove());
+
+      // Optional: Delayed navigation (you can tweak the delay)
+      setTimeout(() => {
+        window.location = rippleBtn.href;
+      }, 650);
+    });
+  });
+});
+
 
 // Form submission handling
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        //e.preventDefault();
+        e.preventDefault();
 
         // Get form data
         const formData = new FormData(contactForm);
@@ -59,7 +101,7 @@ if (contactForm) {
 
         // Simulate form submission
         showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
-        //contactForm.reset();
+        contactForm.reset();
     });
 }
 
@@ -160,3 +202,39 @@ window.addEventListener('scroll', () => {
 
     lastScrollTop = scrollTop;
 });
+
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader-overlay');
+  if (loader) {
+    // Smooth fade out
+    loader.style.opacity = '0';
+    loader.style.transition = 'opacity 0.5s ease';
+
+    // Remove from flow after fade
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 600); // 0.5s fade + buffer
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  function redClickNavigate(selector) {
+    document.querySelectorAll(selector).forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        btn.classList.add('clicked');
+        setTimeout(() => {
+          window.location = btn.href;
+        }, 160); // 160ms for quick feedback
+      });
+    });
+  }
+
+  // Apply to the needed buttons:
+  redClickNavigate('.get-in-touch-btn');
+  redClickNavigate('.learn-more-btn');
+  redClickNavigate('.start-convo-btn');
+  redClickNavigate('.lets-chat-btn');
+  redClickNavigate('.say-hi-btn');
+});
+
+
